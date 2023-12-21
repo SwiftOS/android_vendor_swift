@@ -43,8 +43,8 @@ DEBUG = False
 custom_local_manifest = ".repo/local_manifests/roomservice.xml"
 custom_default_revision =  "14.0"
 custom_dependencies = "crdroid.dependencies"
-org_manifest = "crdroidandroid"  # leave empty if org is provided in manifest
-org_display = "crDroid Android"  # needed for displaying
+org_manifest = "swiftos"  # leave empty if org is provided in manifest
+org_display = "SwiftOS"  # needed for displaying
 
 github_auth = None
 
@@ -286,7 +286,7 @@ def main():
         fallback_branch = detect_revision(repository)
         manufacturer = repo_name.replace("android_device_", "").replace("_" + device, "")
         repo_path = "device/%s/%s" % (manufacturer, device)
-        adding = [{'repository': "crdroidandroid/" + repo_name, 'target_path': repo_path}]
+        adding = [{'repository': "swiftos/" + repo_name, 'target_path': repo_path}]
 
         add_to_manifest(adding, fallback_branch)
 
